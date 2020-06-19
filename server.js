@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 require('./data/reddit-db');
+require('./controllers/comments.js')(app);
+
 
 const exphbs  = require('express-handlebars');
 require('./controllers/posts.js')(app);
