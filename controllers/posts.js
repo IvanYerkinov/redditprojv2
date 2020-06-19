@@ -14,4 +14,14 @@ module.exports = (app) => {
     })
   });
 
+  app.get('/', (req, red) => {
+      Post.find({}).lean()
+  .then(posts => {
+    res.render("posts-index", { posts });
+  })
+  .catch(err => {
+    console.log(err.message);
+  });
+  })
+
 };
