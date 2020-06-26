@@ -10,6 +10,7 @@ const expressValidator = require('express-validator');
 require('./data/reddit-db');
 require('./controllers/comments.js')(app);
 require('./controllers/auth.js')(app);
+require('./controllers/replies.js')(app);
 app.use(cookieParser()); // Add this after you initialize express.
 
 const exphbs  = require('express-handlebars');
